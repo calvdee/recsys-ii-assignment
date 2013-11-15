@@ -34,12 +34,12 @@ public class SimpleItemItemModel implements Serializable {
      * Get the neighbors of an item.
      * @return The neighbors of the item, sorted by decreasing score.
      */
-    public List<ScoredId> getNeighbors(long item) {
+    public List<ScoredId> getNeighbors(long item, int n) {
         List<ScoredId> nbrs = neighborhoods.get(item);
         if (nbrs == null) {
             return Collections.emptyList();
         } else {
-            return nbrs;
+            return nbrs.subList(0, n);
         }
     }
 }

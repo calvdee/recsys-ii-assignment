@@ -1,6 +1,7 @@
 package edu.umn.cs.recsys.ii;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import it.unimi.dsi.fastutil.longs.LongSortedSet;
 import org.grouplens.lenskit.collections.LongUtils;
@@ -18,15 +19,13 @@ import org.grouplens.lenskit.vectors.ImmutableSparseVector;
 import org.grouplens.lenskit.vectors.MutableSparseVector;
 import org.grouplens.lenskit.vectors.SparseVector;
 import org.grouplens.lenskit.vectors.VectorEntry;
+import org.grouplens.lenskit.vectors.similarity.CosineVectorSimilarity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author <a href="http://www.grouplens.org">GroupLens Research</a>
@@ -51,19 +50,38 @@ public class SimpleItemItemModelBuilder implements Provider<SimpleItemItemModel>
 
         // Get all items - you might find this useful
         LongSortedSet items = LongUtils.packedSet(itemVectors.keySet());
-        // Map items to vectors of item similarities
-        Map<Long,MutableSparseVector> itemSimilarities = new HashMap<Long, MutableSparseVector>();
+        Map<Long, List<ScoredId>> itemSimilarities = Maps.newHashMap();
 
+        // Compute the similarities between each pair of items
+        CosineVectorSimilarity sim = new CosineVectorSimilarity();
+        for(long targetItem : items) {
+            ScoredIdListBuilder builder = ScoredIds.newListBuilder();
+            for(long item : items) {
+                if(targetItem == item) continue;
 
-//        Subtract the user's mean rating from each rating prior to computing similarities
-//        Use cosine similarity between items
-//        Only keep positive similarities (> 0)
+                // Use cosine similarity between items
+                double similarity = sim.similarity(itemVectors.get(targetItem), itemVectors.get(item));
+                // Only keep positive similarities (> 0)
+                if(similarity >= 0) {
+                    builder.add(item, similarity);
+                }
+            }
 
+            // Sort the items in decreasing order
+            builder.sort(new Comparator<ScoredId>() {
+                @Override
+                public int compare(ScoredId scoredId, ScoredId scoredId2) {
+                    if(scoredId.getScore() < scoredId2.getScore()) return 1;
+                    if(scoredId.getScore() > scoredId2.getScore()) return -1;
+                    return 0;
+                }
+            });
 
+            itemSimilarities.put(targetItem, builder.build());
+        }
 
-        // TODO Compute the similarities between each pair of items
         // It will need to be in a map of longs to lists of Scored IDs to store in the model
-        return new SimpleItemItemModel(Collections.EMPTY_MAP);
+        return new SimpleItemItemModel(itemSimilarities);
     }
 
     /**
@@ -85,9 +103,20 @@ public class SimpleItemItemModelBuilder implements Provider<SimpleItemItemModel>
         Cursor<UserHistory<Event>> stream = userEventDao.streamEventsByUser();
         try {
             for (UserHistory<Event> evt: stream) {
+                // User's rating vector
                 MutableSparseVector vector = RatingVectorUserHistorySummarizer.makeRatingVector(evt).mutableCopy();
-                // vector is now the user's rating vector
-                // TODO Normalize this vector and store the ratings in the item data
+
+                // Normalize this vector and store the ratings in the item data
+                double userAvg = vector.mean();
+                MutableSparseVector meanVector = vector.mutableCopy();
+                meanVector.fill(userAvg);
+                vector.subtract(meanVector);
+
+                // Add the user's ratings to the itemData
+                for(VectorEntry entry : vector) {
+                    Map<Long, Double> rating = itemData.get(entry.getKey());
+                    rating.put(evt.getUserId(), entry.getValue());
+                }
             }
         } finally {
             stream.close();

@@ -1,5 +1,9 @@
 package edu.umn.cs.recsys.ii;
 
+import it.unimi.dsi.fastutil.longs.LongArrayList;
+import it.unimi.dsi.fastutil.longs.LongArraySet;
+import it.unimi.dsi.fastutil.longs.LongList;
+import it.unimi.dsi.fastutil.longs.LongSet;
 import org.grouplens.lenskit.basic.AbstractItemScorer;
 import org.grouplens.lenskit.data.dao.UserEventDAO;
 import org.grouplens.lenskit.data.event.Rating;
@@ -8,6 +12,7 @@ import org.grouplens.lenskit.data.history.RatingVectorUserHistorySummarizer;
 import org.grouplens.lenskit.data.history.UserHistory;
 import org.grouplens.lenskit.knn.NeighborhoodSize;
 import org.grouplens.lenskit.scored.ScoredId;
+import org.grouplens.lenskit.vectors.ImmutableSparseVector;
 import org.grouplens.lenskit.vectors.MutableSparseVector;
 import org.grouplens.lenskit.vectors.SparseVector;
 import org.grouplens.lenskit.vectors.VectorEntry;
@@ -40,12 +45,30 @@ public class SimpleItemItemScorer extends AbstractItemScorer {
      */
     @Override
     public void score(long user, @Nonnull MutableSparseVector scores) {
-        SparseVector ratings = getUserRatingVector(user);
+        MutableSparseVector ratings = getUserRatingVector(user).mutableCopy();
+        MutableSparseVector work = MutableSparseVector.create(ratings.keySet());
 
         for (VectorEntry e: scores.fast(VectorEntry.State.EITHER)) {
             long item = e.getKey();
-            List<ScoredId> neighbors = model.getNeighbors(item);
-            // TODO Score this item and save the score into scores
+            work.fill(0.0);
+            List<ScoredId> neighbors = model.getNeighbors(item, neighborhoodSize);
+
+            // Compute sum of neighbors and weighted score for each item rated by the user
+            double neighborsSum = 0.0;
+            for(ScoredId score : neighbors) {
+                double similarity = score.getScore();
+                neighborsSum += similarity;
+
+                if(!ratings.containsKey(score.getId())) continue;
+
+                double userRating = ratings.get(score.getId());
+                double weightedScore = similarity * userRating;
+
+                work.set(item, weightedScore);
+            }
+
+            double weightedSum = work.sum();
+            scores.set(item, weightedSum / neighborsSum);
         }
     }
 

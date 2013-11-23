@@ -56,27 +56,20 @@ public class SimpleItemItemModelBuilder implements Provider<SimpleItemItemModel>
         CosineVectorSimilarity sim = new CosineVectorSimilarity();
         for(long targetItem : items) {
             ScoredIdListBuilder builder = ScoredIds.newListBuilder();
+
             for(long item : items) {
                 if(targetItem == item) continue;
 
                 // Use cosine similarity between items
-                double similarity = sim.similarity(itemVectors.get(targetItem), itemVectors.get(item));
+                double similarity = sim.similarity(itemVectors.get(item), itemVectors.get(targetItem));
                 // Only keep positive similarities (> 0)
-                if(similarity >= 0) {
+                if(similarity > 0) {
                     builder.add(item, similarity);
                 }
             }
 
             // Sort the items in decreasing order
-            builder.sort(new Comparator<ScoredId>() {
-                @Override
-                public int compare(ScoredId scoredId, ScoredId scoredId2) {
-                    if(scoredId.getScore() < scoredId2.getScore()) return 1;
-                    if(scoredId.getScore() > scoredId2.getScore()) return -1;
-                    return 0;
-                }
-            });
-
+            builder.sort(ScoredIds.scoreOrder().reverse());
             itemSimilarities.put(targetItem, builder.build());
         }
 
@@ -108,9 +101,7 @@ public class SimpleItemItemModelBuilder implements Provider<SimpleItemItemModel>
 
                 // Normalize this vector and store the ratings in the item data
                 double userAvg = vector.mean();
-                MutableSparseVector meanVector = vector.mutableCopy();
-                meanVector.fill(userAvg);
-                vector.subtract(meanVector);
+                vector.add(-userAvg);
 
                 // Add the user's ratings to the itemData
                 for(VectorEntry entry : vector) {

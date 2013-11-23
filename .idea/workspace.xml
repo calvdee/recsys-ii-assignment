@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6183251-701d-43d1-9459-5c87d6084297" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleGlobalItemScorer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleGlobalItemScorer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModel.java" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModelBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModelBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemScorer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemScorer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ii-assignment.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1384547040993" ignored="false" />
-    <file path="/Dummy.txt" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1384549510114" ignored="false" />
-    <file path="/SimpleItemItemModelBuilder.java" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1384549943150" ignored="false" />
-    <file path="/SimpleItemItemScorer.java" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1384551807577" ignored="false" />
-    <file path="/SimpleItemItemModel.java" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1384550418348" ignored="false" />
+    <file path="/fragment.java" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1384905441877" ignored="false" />
+    <file path="/Dummy.txt" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1385166829758" ignored="false" />
+    <file path="/SimpleItemItemModelBuilder.java" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1384988829991" ignored="false" />
+    <file path="/SimpleItemItemScorer.java" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1385166930351" ignored="false" />
+    <file path="/SimpleItemItemModel.java" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1385166876658" ignored="false" />
+    <file path="/SimpleGlobalItemScorer.java" changelist="b6183251-701d-43d1-9459-5c87d6084297" time="1384947640214" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -65,7 +67,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -75,71 +77,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IIMain.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/IIMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="31" selection-start="5745" selection-end="5758" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CSVItemTagDAO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/dao/CSVItemTagDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="54" selection-start="1419" selection-end="1419" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="docComment;class#CSVItemTagDAO#0" expanded="false" />
-                <element signature="method#CSVItemTagDAO#0;class#CSVItemTagDAO#0" expanded="false" />
-                <element signature="method#getItemTags#0;class#CSVItemTagDAO#0" expanded="false" />
-                <element signature="method#getTagVocabulary#0;class#CSVItemTagDAO#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MOOCItemDAO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/dao/MOOCItemDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="29" selection-start="1546" selection-end="1549" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="docComment;class#MOOCItemDAO#0" expanded="false" />
-                <element signature="method#MOOCItemDAO#0;class#MOOCItemDAO#0" expanded="false" />
-                <element signature="method#ensureTitleCache#0;class#MOOCItemDAO#0" expanded="false" />
-                <element signature="method#getItemIds#0;class#MOOCItemDAO#0" expanded="false" />
-                <element signature="method#getItemTitle#0;class#MOOCItemDAO#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MOOCRatingDAO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/dao/MOOCRatingDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="38" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SimpleItemItemModelBuilder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModelBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="0" selection-start="2917" selection-end="2917" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#2942#3289#0" expanded="true" />
-                <element signature="e#3274#3275#0" expanded="true" />
-                <element signature="e#4007#4032#0" expanded="true" />
-                <element signature="e#5342#5371#0" expanded="true" />
-              </folding>
+            <state line="59" column="33" selection-start="2476" selection-end="2476" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleItemItemScorer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SimpleItemItemModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="16" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleItemItemScorer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemScorer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="42" selection-start="2520" selection-end="2520" vertical-scroll-proportion="0.5016611">
+            <state line="62" column="23" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleGlobalItemScorer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleGlobalItemScorer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="32" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.76502734">
               <folding />
             </state>
           </provider>
@@ -163,9 +131,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModelBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemScorer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModelBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleGlobalItemScorer.java" />
       </list>
     </option>
   </component>
@@ -180,10 +149,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-4" />
-    <option name="width" value="1857" />
-    <option name="height" value="1085" />
+    <option name="x" value="65" />
+    <option name="y" value="-1056" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -212,7 +181,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -325,6 +293,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,16 +302,17 @@
     <property name="options.lastSelected" value="reference.settings.project.maven.importing" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Sample Data">
+  <component name="RunManager" selected="Application.Basket - Submission Data">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -355,19 +325,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -395,6 +352,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -434,7 +404,7 @@
     <configuration default="false" name="Sample Data" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.umn.cs.recsys.ii.IIMain" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="2048:77 2048:36955 2048:788" />
+      <option name="PROGRAM_PARAMETERS" value="1024:77 1024:268 1024:462 1024:393 1024:36955 2048:77 2048:36955 2048:788" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -453,8 +423,65 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="Submission Data" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.umn.cs.recsys.ii.IIMain" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="5411:38 5411:187 5411:14 5411:141 5411:862 3205:146 3205:857 3205:1637 3205:8587 3205:602 5129:36658 5129:393 5129:581 5129:1597 5129:63 564:640 564:24 564:187 564:581 564:36658 1521:752 1521:268 1521:862 1521:278 1521:329" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ii-assignment" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Basket - Sample Data" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.umn.cs.recsys.ii.IIMain" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="--basket 77 680" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ii-assignment" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Basket - Submission Data" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.umn.cs.recsys.ii.IIMain" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="--basket 752 153" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ii-assignment" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Sample Data" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Submission Data" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Basket - Sample Data" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Basket - Submission Data" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -471,31 +498,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="false" />
+    <frame x="65" y="-1056" width="1855" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="165" y="97" width="1657" height="885" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59658486" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20176893" sideWeight="0.67022413" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26091763" sideWeight="0.61366063" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38633937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="165" y="97" width="1657" height="885" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -563,123 +590,92 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/QueryDAOProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="447" selection-end="447" vertical-scroll-proportion="0.13143483">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/IIMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="31" selection-start="5745" selection-end="5758" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="147" column="31" selection-start="5745" selection-end="5758" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/grouplens/lenskit/lenskit-core/2.0.4/lenskit-core-2.0.4.jar!/org/grouplens/lenskit/util/DelimitedTextCursor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="11" selection-start="801" selection-end="801" vertical-scroll-proportion="0.24">
-          <folding />
-        </state>
+        <state line="15" column="11" selection-start="801" selection-end="801" vertical-scroll-proportion="0.24" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/dao/ItemTagDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="225" selection-end="225" vertical-scroll-proportion="0.13143483">
-          <folding />
-        </state>
+        <state line="9" column="17" selection-start="225" selection-end="225" vertical-scroll-proportion="0.13143483" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/dao/ItemTitleDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="257" selection-end="257" vertical-scroll-proportion="0.14786418">
-          <folding />
-        </state>
+        <state line="11" column="17" selection-start="257" selection-end="257" vertical-scroll-proportion="0.14786418" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/dao/CSVItemTagDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="54" selection-start="1419" selection-end="1419" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#CSVItemTagDAO#0" expanded="false" />
-            <element signature="method#CSVItemTagDAO#0;class#CSVItemTagDAO#0" expanded="false" />
-            <element signature="method#getItemTags#0;class#CSVItemTagDAO#0" expanded="false" />
-            <element signature="method#getTagVocabulary#0;class#CSVItemTagDAO#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="39" column="54" selection-start="1419" selection-end="1419" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/dao/MOOCItemDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="29" selection-start="1546" selection-end="1549" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#MOOCItemDAO#0" expanded="false" />
-            <element signature="method#MOOCItemDAO#0;class#MOOCItemDAO#0" expanded="false" />
-            <element signature="method#ensureTitleCache#0;class#MOOCItemDAO#0" expanded="false" />
-            <element signature="method#getItemIds#0;class#MOOCItemDAO#0" expanded="false" />
-            <element signature="method#getItemTitle#0;class#MOOCItemDAO#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="47" column="29" selection-start="1546" selection-end="1549" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/dao/MOOCRatingDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="38" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="37" column="38" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/grouplens/lenskit/lenskit-data-structures/2.0.4/lenskit-data-structures-2.0.4.jar!/org/grouplens/lenskit/vectors/ImmutableSparseVector.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="19" selection-start="217" selection-end="217" vertical-scroll-proportion="0.10309278">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/grouplens/lenskit/lenskit-core/2.0.4/lenskit-core-2.0.4.jar!/org/grouplens/lenskit/data/history/RatingVectorUserHistorySummarizer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="61" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.32646048">
-          <folding />
-        </state>
+        <state line="7" column="19" selection-start="217" selection-end="217" vertical-scroll-proportion="0.10309278" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/grouplens/grapht/grapht/0.6.0/grapht-0.6.0-sources.jar!/org/grouplens/grapht/util/MemoizingProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="2011" selection-end="2011" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="58" column="0" selection-start="2011" selection-end="2011" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/grouplens/lenskit/lenskit-core/2.0.4/lenskit-core-2.0.4.jar!/org/grouplens/lenskit/core/StaticInjector.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="28" selection-start="1180" selection-end="1180" vertical-scroll-proportion="-12.6">
-          <folding />
-        </state>
+        <state line="22" column="28" selection-start="1180" selection-end="1180" vertical-scroll-proportion="-12.6" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModel.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/grouplens/lenskit/lenskit-core/2.0.4/lenskit-core-2.0.4.jar!/org/grouplens/lenskit/data/history/RatingVectorUserHistorySummarizer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="36" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.8471761">
+        <state line="20" column="61" selection-start="1073" selection-end="1073" vertical-scroll-proportion="-11.4" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eval/eval.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModelBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="2917" selection-end="2917" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2942#3289#0" expanded="true" />
-            <element signature="e#3274#3275#0" expanded="true" />
-            <element signature="e#4007#4032#0" expanded="true" />
-            <element signature="e#5342#5371#0" expanded="true" />
-          </folding>
+        <state line="59" column="33" selection-start="2476" selection-end="2476" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="16" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleItemItemScorer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="42" selection-start="2520" selection-end="2520" vertical-scroll-proportion="0.5016611">
+        <state line="62" column="23" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/umn/cs/recsys/ii/SimpleGlobalItemScorer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="32" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.76502734">
           <folding />
         </state>
       </provider>

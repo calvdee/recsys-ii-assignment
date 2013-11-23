@@ -50,21 +50,23 @@ public class SimpleItemItemScorer extends AbstractItemScorer {
 
         for (VectorEntry e: scores.fast(VectorEntry.State.EITHER)) {
             long item = e.getKey();
-            work.fill(0.0);
-            List<ScoredId> neighbors = model.getNeighbors(item, neighborhoodSize);
+            work.fill(0);
+            List<ScoredId> neighbors = model.getNeighbors(item);
 
             // Compute sum of neighbors and weighted score for each item rated by the user
             double neighborsSum = 0.0;
-            for(ScoredId score : neighbors) {
-                double similarity = score.getScore();
-                neighborsSum += similarity;
+            int nbrs = 0;
+            for(ScoredId nnbr : neighbors) {
+                if(!ratings.containsKey(nnbr.getId())) continue;
+                if(nbrs == neighborhoodSize) break;
 
-                if(!ratings.containsKey(score.getId())) continue;
-
-                double userRating = ratings.get(score.getId());
+                nbrs++;
+                double similarity = nnbr.getScore();
+                double userRating = ratings.get(nnbr.getId());
                 double weightedScore = similarity * userRating;
 
-                work.set(item, weightedScore);
+                neighborsSum += similarity;
+                work.set(nnbr.getId(), weightedScore);
             }
 
             double weightedSum = work.sum();
